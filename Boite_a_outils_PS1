@@ -1,0 +1,40 @@
+--- Cleanup disk ---
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Windows\system32> dism /Online /Cleanup-Image /AnalyzeComponentStore
+
+Deployment Image Servicing and Management tool
+Version: 10.0.17763.1697
+
+Image Version: 10.0.17763.2300
+
+[==========================100.0%==========================]
+
+Component Store (WinSxS) information:
+
+Windows Explorer Reported Size of Component Store : 9.60 GB
+
+Actual Size of Component Store : 9.36 GB
+
+    Shared with Windows : 5.84 GB
+    Backups and Disabled Features : 3.33 GB
+    Cache and Temporary Data : 180.18 MB
+
+Date of Last Cleanup : 2021-11-05 07:32:21
+
+Number of Reclaimable Packages : 3
+Component Store Cleanup Recommended : Yes
+
+The operation completed successfully.
+PS C:\Windows\system32> dism /online /Cleanup-Image /StartComponentCleanup
+
+Deployment Image Servicing and Management tool
+Version: 10.0.17763.1697
+
+Image Version: 10.0.17763.2300
+
+[===========================99.0%========================= ]
+[==========================100.0%==========================]
+The operation completed successfully.
+PS C:\Windows\system32>
